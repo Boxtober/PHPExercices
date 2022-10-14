@@ -1,0 +1,28 @@
+<!-- 
+
+- Créer un formulaire contenant :
+-> un champ pour saisir une adresse e-mail 
+-> un champ caché destiné à récupérer le type du navigateur de l’utilisateur 
+(indice : voir $_SERVER)
+
+
+
+'HTTP_USER_AGENT'
+
+Contenu de l'en-tête User_Agent: de la requête courante, si elle existe. 
+C'est une chaîne qui décrit le client HTML utilisé pour voir la page courante. 
+Par exemple : Mozilla/4.5 [en] (X11; U; Linux 2.2.9 i586). 
+Entre autres choses, vous pouvez utiliser cette valeur avec get_browser() 
+pour optimiser votre page en fonction des capacités du client. -->
+
+<h2>Mail & Navigateur</h2>
+
+<form action="submit_form2.php" method="post">
+
+    <input type="hidden" name="Navigateur" value="HTTP_USER_AGENT" />
+    <label for="mail">Mail : </label>
+    <input type="email" name="mail"> <br><br>
+
+<input type="submit">
+
+</form>

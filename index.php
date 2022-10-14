@@ -78,7 +78,6 @@ else {
 
 <?php 
 
-$majorite = 18;
 
 if ($age % 2 == 1)
 {
@@ -90,6 +89,8 @@ elseif ($age % 2 == 0) {
 }
 
 ?>
+
+
 <br><br>
 
 <!---  Vérifier si un nombre est un multiple de 3 et de 5. --->
@@ -139,14 +140,21 @@ echo $semaine[0] . " des patates, " . $semaine[1] .  " des patates, " . $semaine
 <?php
 
 
+
 $nbrs = [1, 10]
 
 ?>
+
+
 <!--- Créer une fonction qui prend 4 paramètres. 
 
 Afficher un message qui vérifie si la somme des 2 premiers paramètres est supérieure, 
 
 inférieure ou égale à la multiplication des deux derniers paramètres  --->
+<br><br>
+<br><br>
+<br><br><h2> CORRECTIONS</h2>
+<!-----correction --------->
 
 <?php
 
@@ -176,5 +184,38 @@ function estEgale($resultat1, $resultat2) {
 
 ?>
 
+<p>--------------------------------------------------------------</p>
 
+<!--- Créer une fonction qui reçoit 2 nombres en paramètres et affiche tous les nombres entre les deux nombres donnés en paramètres.  --->
+<?php
+
+
+function interval ($nbr1, $nbr2) {
+
+    $nbr1++;
+    for ($i = $nbr1; $i < $nbr2; $i++){
+
+        echo $i . "<br>";
+    }
+}
+
+interval(0, 12);
+echo "<br>";
+
+function interval2 ($nbr1, $nbr2){
+    $nbr2++;
+    foreach(range($nbr1, $nbr2, 3) as $result) {
+
+        echo $result . "<br>";
+    } 
+}
+
+interval2(0, 22);
+?>
+
+<br><br>
+<!-----correction --------->
+
+<!--- Créer une fonction qui reçoit 2 nombres en paramètres et affiche tous les nombres entre les deux nombres donnés en paramètres.  --->
+<?php
 
